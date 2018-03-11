@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bind_CollectionView_RxSwift/ViewController.swift"
+            timestampString = "542481985.381615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bind_CollectionView_RxSwift.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Bind_CollectionView_RxSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/Bind_CollectionView_RxSwift/Bind_CollectionView_RxSwift/ViewController.swift"
+                  timestampString = "542481005.697953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "2270">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 (__ObjC.UILongPressGestureRecognizer) -&gt; () in Bind_CollectionView_RxSwift.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Bind_CollectionView_RxSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aocampoe/Documents/ANDRES/Bind_CollectionView_RxSwift/Bind_CollectionView_RxSwift/ViewController.swift"
+                  timestampString = "542481005.701895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

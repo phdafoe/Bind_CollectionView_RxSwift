@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,15 +13,105 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bind_CollectionView_RxSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcP-Cd-ZTL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.9542786593" green="0.61509046119999999" blue="0.25280775649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="xln-pd-TVp">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ch6-Po-aC4"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bz4-pQ-itk">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J08-NP-iMr">
+                                    <size key="itemSize" width="105" height="105"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="hkK-2F-dIl" customClass="Cell" customModule="Bind_CollectionView_RxSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="105" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99-99" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rod-Zx-4LF">
+                                                    <rect key="frame" x="22" y="27" width="60" height="51"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.9542786593" green="0.61509046119999999" blue="0.25280775649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rod-Zx-4LF" secondAttribute="trailing" constant="23" id="RTC-jU-891"/>
+                                            <constraint firstItem="rod-Zx-4LF" firstAttribute="top" secondItem="hkK-2F-dIl" secondAttribute="top" constant="27" id="SxG-gO-XMZ"/>
+                                            <constraint firstItem="rod-Zx-4LF" firstAttribute="leading" secondItem="hkK-2F-dIl" secondAttribute="leading" constant="22" id="jM8-42-upR"/>
+                                            <constraint firstAttribute="bottom" secondItem="rod-Zx-4LF" secondAttribute="bottom" constant="27" id="o0I-4U-n4Y"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="myTitleLBL" destination="rod-Zx-4LF" id="cp0-SR-2qu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Header" id="Gky-04-cMr" customClass="HeaderView" customModule="Bind_CollectionView_RxSwift" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHA-d0-uxO">
+                                            <rect key="frame" x="8" y="15" width="359" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.65098039220000004" green="0.69803921570000005" blue="0.13725490200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="HHA-d0-uxO" secondAttribute="trailing" constant="8" id="43i-sL-ss0"/>
+                                        <constraint firstItem="HHA-d0-uxO" firstAttribute="top" secondItem="Gky-04-cMr" secondAttribute="top" constant="15" id="SXj-7V-9vs"/>
+                                        <constraint firstItem="HHA-d0-uxO" firstAttribute="leading" secondItem="Gky-04-cMr" secondAttribute="leading" constant="8" id="hfB-c3-aar"/>
+                                        <constraint firstAttribute="bottom" secondItem="HHA-d0-uxO" secondAttribute="bottom" constant="14" id="qVW-cW-a39"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="mySectionLBL" destination="HHA-d0-uxO" id="JgI-yc-5tf"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bz4-pQ-itk" secondAttribute="bottom" id="Opa-8e-BNs"/>
+                            <constraint firstItem="dcP-Cd-ZTL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cvA-6c-0LK"/>
+                            <constraint firstItem="dcP-Cd-ZTL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="l1c-Tl-Q8N"/>
+                            <constraint firstItem="bz4-pQ-itk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rju-X1-YMh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bz4-pQ-itk" secondAttribute="trailing" id="tiI-gK-AIP"/>
+                            <constraint firstItem="bz4-pQ-itk" firstAttribute="top" secondItem="dcP-Cd-ZTL" secondAttribute="bottom" id="wtw-ei-d5z"/>
+                            <constraint firstItem="dcP-Cd-ZTL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ySu-IO-Ect"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="td8-WK-fKg" appends="YES" id="FjL-4h-xUR"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="myAddBarButtonItem" destination="ch6-Po-aC4" id="dxR-il-Vd9"/>
+                        <outlet property="myCollectionView" destination="bz4-pQ-itk" id="IiS-Am-LKD"/>
+                        <outlet property="myLongPressGR" destination="td8-WK-fKg" id="QcT-OR-oUq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="td8-WK-fKg"/>
             </objects>
         </scene>
     </scenes>
